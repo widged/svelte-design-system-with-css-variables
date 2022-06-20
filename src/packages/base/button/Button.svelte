@@ -4,9 +4,16 @@
     secondary: 'secondary',
     tertiary: 'tertiary',
   };
+
+  export const types = {
+    submit: 'submit',
+    reset: 'reset',
+    button: 'tertiary',
+  };
+
   export const ARROW = {
-    forwards: '->',
-    backwards: '<-',
+    '->': '->',
+    '<-': '<-',
   };
 
   const arrow_i = `<svg
@@ -44,7 +51,7 @@
   export let busy = false;
   /** Whether to make it a fat button */
   export let fat = false;
-  /** Optional button type */
+  /** Optional button type submit -reset - button */
   export let type = '';
 
   const asString = (d) => (d && d.length ? d : undefined);
