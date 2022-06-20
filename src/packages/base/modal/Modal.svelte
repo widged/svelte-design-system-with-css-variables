@@ -1,19 +1,19 @@
 <!--
 ### Fullscreen modal
  -->
-<script lang="ts">
+<script>
   import { createEventDispatcher } from 'svelte';
   import { quadIn, quadOut } from 'svelte/easing';
   import { fade } from 'svelte/transition';
-  import { portal } from '../../actions/portal';
+  import { portal } from './action-portal.js';
 
   /** Whether modal is open */
-  export let open: boolean;
+  export let open;
   /** Optional root container (defaults to body) */
-  export let root: HTMLElement | undefined = undefined;
-  export let style: string | undefined = undefined;
+  export let root = undefined;
+  export let style = undefined;
 
-  let overlay: HTMLDivElement;
+  let overlay;
 
   const event = createEventDispatcher();
   function close() {
@@ -21,56 +21,26 @@
     open = false;
   }
 
-  function closeOnEsc({ key }: KeyboardEvent) {
+  function closeOnEsc({ key }) {
     key === 'Escape' && close();
   }
 
-  function closeOnClick({ target }: MouseEvent) {
+  function closeOnClick({ target }) {
     if (target === overlay) {
       close();
     }
   }
 
-  function lockBody(node: HTMLElement, open: boolean) {
-    const toggle = (open: boolean) => {
-      node.parentElement!.style.overflow = open ? 'hidden' : '';
+  function lockBody(node, open) {
+    const toggle = (open) => {
+      node.parentElement.style.overflow = open ? 'hidden' : '';
     };
     toggle(open);
     return {
-      update: (open: boolean) => toggle(open)
+      update: (open) => toggle(open),
     };
   }
 </script>
-
-<style lang="postcss">
-  .overlay {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--color-black-opacity);
-    z-index: var(--layer-top);
-    backdrop-filter: var(--blur-md);
-  }
-
-  .modal {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-bg);
-    border-radius: var(--modal-radius, var(--radius-sm));
-    margin: var(--grid-page-gutter);
-    max-width: var(--modal-width, var(--width-md));
-    width: 100%;
-    overflow: hidden;
-    @media (--desktop) {
-      max-width: var(--modal-width, 1140px);
-    }
-  }
-</style>
 
 <svlete:window on:keydown={closeOnEsc} />
 <svelte:body use:lockBody={open} />
@@ -94,3 +64,36 @@
     </div>
   </div>
 {/if}
+
+<style>
+  .overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-black-opacity);
+    z-index: var(--layer-top);
+    backdrop-filter: var(--blur-md);
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg);
+    border-radius: var(--modal-radius, var(--radius-sm));
+    margin: var(--grid-page-gutter);
+    max-width: var(--modal-width, var(--width-md));
+    width: 100%;
+    overflow: hidden;
+  }
+
+  @media (--desktop) {
+    .modal {
+      max-width: var(--modal-width, 1140px);
+    }
+  }
+</style>
