@@ -1,6 +1,10 @@
 <script>
   import Masonry from '../';
-  const items = [{@html <div>hello</div>}];
+  const items = [
+    { id: 1, name: 'Milk', done: false },
+    { id: 2, name: 'Bread', done: true },
+    { id: 3, name: 'Eggs', done: false },
+  ];
 </script>
 
 <div class="px-8">
