@@ -1,6 +1,6 @@
 {
   "name": "svelte-design-system-with-css-variables",
-  "author": "Marielle Lange (https://github.com/widged/)"
+  "author": "Marielle Lange (https://github.com/widged/)",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -25,7 +25,7 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
-    "expandable-pane": "file:./src/packages/expandable-pane"
+    "@popperjs/core": "^2.11.5"
   },
   "alias": {
     "@package": "src/packages"
