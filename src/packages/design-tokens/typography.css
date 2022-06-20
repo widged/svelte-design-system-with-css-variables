@@ -1,0 +1,95 @@
+/**
+   * Fonts
+   * Applied as font-family 
+   */
+:root {
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell,
+    'Helvetica Neue';
+  --font-serif: Georgia, Cambria, TimesNewRoman, Times, serif;
+  --font-mono: Consolas, Menlo, Monaco, LiberationMono, monospace;
+}
+
+/**
+* Fonts
+* Applied as font-weight
+*/
+:root {
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+}
+
+/**
+* Line Heights
+*/
+.root {
+  --line-none: 1;
+  --line-xs: 1.125;
+  --line-sm: 1.275;
+  --line-md: 1.5;
+  --line-lg: 1.625;
+  --line-xl: 2;
+}
+
+/**
+* Letter spacing
+*/
+:root {
+  --letter-xs: -0.05em;
+  --letter-sm: -0.025em;
+  --letter-none: 0em;
+  --letter-lg: 0.025em;
+  --letter-xl: 0.05em;
+}
+
+/**
+* Prose measure
+* Applied as max-width
+*/
+:root {
+  --prose-lg: 75ch;
+  --prose-md: 65ch;
+  --prose-sm: 55ch;
+  --prose-xl: 85ch;
+  --prose-xs: 45ch;
+}
+
+/**
+* Modular scale
+* Applied as font-size
+*/
+:root {
+  --scale-000: 0.75rem;
+  --scale-00: 0.875rem;
+  --scale-0: 1rem;
+  --scale-1: 1.125rem;
+  --scale-2: 1.25rem;
+  --scale-3: 1.5rem;
+  --scale-4: 1.875rem;
+  --scale-5: 2.25rem;
+  --scale-6: 3rem;
+  --scale-7: 3.75rem;
+  --scale-8: 4.5rem;
+  --scale-9: 6rem;
+  --scale-10: 8rem;
+}
+
+:root {
+  --typeset-000: var(--scale-000) / 1.3;
+  --typeset-00: var(--scale-00) / 1.35;
+  --typeset-0: var(--scale-0) / 1.45;
+  --typeset-1: var(--scale-1) / 1.45;
+  --typeset-2: var(--scale-2) / 1.4;
+  --typeset-3: var(--scale-3) / 1.3;
+  --typeset-4: var(--scale-4) / 1.2;
+  --typeset-5: var(--scale-5) / 1.2;
+  --typeset-6: var(--scale-6) / 1.2;
+  --typeset-7: var(--scale-7) / 1.2;
+  --typeset-8: var(--scale-8) / 1.15;
+  --typeset-9: var(--scale-9) / 1.1;
+  --typeset-10: var(--scale-10) / 1.1;
+}
