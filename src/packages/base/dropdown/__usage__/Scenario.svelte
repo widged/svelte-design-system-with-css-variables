@@ -9,11 +9,11 @@
 
 <style>
   :root {
-    --gray-300: #d4d7dd;
-    --gray-600: #555d6e;
-    --color-bg-tertiary: var(--gray-300);
-    --color-text: var(--gray-600);
-    --color-text-secondary: var(--gray-600);
+    --grey-300: #d4d7dd;
+    --grey-600: #555d6e;
+    --color-bg-tertiary: var(--gry-300);
+    --color-text: var(--grey-600);
+    --color-text-secondary: var(--grey-600);
     --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
     --elevation-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 
