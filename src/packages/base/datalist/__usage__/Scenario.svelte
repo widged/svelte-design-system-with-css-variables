@@ -23,7 +23,7 @@
     --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
     --size-1: 4px;
     --size-2: 8px;
-    --size-4: 12px;
+    --size-4: 16px;
     --text-sm: 0.875rem / 1.5;
     --weight-medium: 500;
   }
