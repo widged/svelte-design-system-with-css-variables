@@ -4,7 +4,7 @@
 </script>
 
 <div class="px-8">
-  <h1>Scenario 2 -- label defined</h1>
+  <h1>Scenario -- label defined</h1>
   <FeaturedIcon icon={image} asImg={true} />
 </div>
 

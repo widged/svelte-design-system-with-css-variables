@@ -1,10 +1,11 @@
 <script>
-  import Badge from '../';
+  import Masonry from '../';
+  const items = [{@html <div>hello</div>}];
 </script>
 
 <div class="px-8">
   <h1>Scenario -- label defined</h1>
-  <Badge label="10" />
+  <Masonry {items} />
 </div>
 
 <style>
