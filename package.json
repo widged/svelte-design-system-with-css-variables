@@ -25,7 +25,8 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.5"
+    "@popperjs/core": "^2.11.5",
+    "svelte-imgix": "^3.1.0"
   },
   "alias": {
     "@package": "src/packages"
