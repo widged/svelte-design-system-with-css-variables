@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.5",
+    "notyf": "^3.10.0",
     "svelte-dnd-action": "^0.9.18",
     "svelte-imgix": "^3.1.0"
   },

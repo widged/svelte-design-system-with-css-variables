@@ -11,6 +11,9 @@
   },
   "author": "Marielle Lange",
   "license": "All Rights Reserved",
+  "dependencies": {
+    "notyf": "^3.10.0"
+  },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "1.0.0-next.42",
     "parcel": "^2.6.0",

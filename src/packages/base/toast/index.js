@@ -1,1 +1,1 @@
-export { default } from './Toast.svelte';
+export { default, toast } from './Toast.svelte';

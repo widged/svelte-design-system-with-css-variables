@@ -1,10 +1,16 @@
 <script>
-  import Toast from '../';
+  import Button from './Button.svelte';
+  import Toast, { toast } from '../';
 </script>
 
 <div class="px-8">
   <h1>Scenario -- label defined</h1>
-  <Toast label="10" />
+  <Toast />
+  <div>
+    <Button on:click={() => toast.info({ title: 'Hello world', message: 'How do you do?' })}
+      >Trigger toast</Button
+    >
+  </div>
 </div>
 
 <style>

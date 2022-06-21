@@ -1,20 +1,23 @@
 <!--
 ### Global toast notification provider
  -->
-<script context="module" lang="ts">
-  import successIcon from 'lucide-static/icons/check-circle-2.svg';
-  import infoIcon from 'lucide-static/icons/info.svg';
-  import errorIcon from 'lucide-static/icons/slash.svg';
+<script context="module">
+  import successIcon from './etc/check-circle-2.svg';
+  import infoIcon from './etc/info.svg';
+  import errorIcon from './etc/slash.svg';
   import { Notyf } from 'notyf';
   import 'notyf/notyf.min.css';
 
-  let notyf: Notyf;
+  /*  export let type ={
+    error: 'error',
+    success: 'success',
+  info: 'info'
+  }
+  */
 
-  function addToast(
-    title: string,
-    message: string,
-    type: 'error' | 'success' | 'info' = 'info'
-  ) {
+  let notyf;
+
+  function addToast(title, message, type = 'info') {
     if (!notyf) {
       notyf = new Notyf({
         duration: 3000,
@@ -22,49 +25,48 @@
         dismissible: true,
         position: {
           x: 'right',
-          y: 'bottom'
+          y: 'bottom',
         },
         types: [
           {
             type: 'error',
             icon: errorIcon,
-            background: 'var(--color-black)'
+            background: 'var(--color-black)',
           },
           {
             type: 'success',
             icon: successIcon,
-            background: 'var(--color-black)'
+            background: 'var(--color-black)',
           },
           {
             type: 'info',
             icon: infoIcon,
-            background: 'var(--color-black)'
-          }
-        ]
+            background: 'var(--color-black)',
+          },
+        ],
       });
     }
 
     notyf.open({
       type,
-      message: `<span class="notyf__title">${title}</span><p>${message}</p>`
+      message: `<span class="notyf__title">${title}</span><p>${message}</p>`,
     });
   }
 
-  type ToastConfig = { title: string; message: string };
   export const toast = {
-    info(config: ToastConfig) {
+    info(config) {
       addToast(config.title, config.message, 'info');
     },
-    success(config: ToastConfig) {
+    success(config) {
       addToast(config.title, config.message, 'success');
     },
-    error(config: ToastConfig) {
+    error(config) {
       addToast(config.title, config.message, 'error');
-    }
+    },
   };
 </script>
 
-<style global lang="postcss">
+<style>
   @keyframes slideUp {
     from {
       transform: translateY(100%);
@@ -120,22 +122,20 @@
     border-radius: var(--radius-100);
     animation: none;
     opacity: 1;
-    & svg {
-      height: var(--size-4);
-      width: var(--size-4);
-    }
   }
-
+  .notyf__icon svg {
+    height: var(--size-4);
+    width: var(--size-4);
+  }
   .notyf__message {
     font: var(--text-sm);
     color: var(--color-grey-400);
     animation: none;
     opacity: 1;
-    & p {
-      margin: 0;
-    }
   }
-
+  .notyf__message p {
+    margin: 0;
+  }
   .notyf__title {
     color: white;
     font-weight: var(--weight-medium);
