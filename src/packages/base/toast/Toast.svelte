@@ -87,10 +87,12 @@
   }
 
   .notyf {
+    color: var(--text-color);
     padding: var(--grid-page-gutter);
   }
 
   .notyf__toast {
+    color: var(--text-color);
     border-radius: var(--radius-sm);
     padding: 0;
     box-shadow: var(--elevation-xs);
@@ -117,8 +119,8 @@
     margin-right: var(--size-4);
     width: var(--size-8);
     height: var(--size-8);
-    background: var(--icon-background, var(--color-grey-600));
-    border: var(--size-1) solid var(--icon-border, var(--color-grey-700));
+    background: var(--icon-background, var(--grey-600));
+    border: var(--size-1) solid var(--icon-border, var(--grey-700));
     border-radius: var(--radius-100);
     animation: none;
     opacity: 1;
@@ -129,15 +131,16 @@
   }
   .notyf__message {
     font: var(--text-sm);
-    color: var(--color-grey-400);
+    color: var(--grey-400);
     animation: none;
     opacity: 1;
   }
   .notyf__message p {
+    color: var(--text-color);
     margin: 0;
   }
   .notyf__title {
-    color: white;
+    color: var(--text-color);
     font-weight: var(--weight-medium);
   }
 
@@ -148,13 +151,15 @@
     margin-left: var(--size-6);
   }
 
-  .notyf__toast--error {
-    --icon-background: var(--color-error);
-    --icon-border: var(--color-error-700);
+  :global(.notyf__toast--error) {
+    color: var(--intent-error);
+    --icon-background: var(--intent-error);
+    --icon-border: var(--intent-error-700);
   }
 
-  .notyf__toast--success {
-    --icon-background: var(--color-success);
-    --icon-border: var(--color-success-700);
+  :global(.notyf__toast--success) {
+    color: var(--intent-success);
+    --icon-background: var(--intent-success);
+    --icon-border: var(--intent-success-700);
   }
 </style>

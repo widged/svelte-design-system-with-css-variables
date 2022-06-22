@@ -16,7 +16,6 @@
     --color-text-secondary: var(--grey-600);
     --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
     --elevation-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-
     --elevation-xs: var(--elevation-1);
     --layer-top: 2147483647;
     --radius-xs: 3px;
