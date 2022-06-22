@@ -1,0 +1,38 @@
+:root {
+  /* blue */
+  --tint-blue-300: #63b3ed;
+  --tint-blue-500: #4299e1;
+  --tint-blue-700: #3182ce;
+  /* brown */
+  --tint-brown-300: #a1887f;
+  --tint-brown-500: #795548;
+  --tint-brown-700: #5d4037;
+  /* green */
+  --tint-green-300: #9ae6b4;
+  --tint-green-500: #48bb78;
+  --tint-green-700: #2f855a;
+  /* orange */
+  --tint-orange-300: #fbd38d;
+  --tint-orange-500: #ed8936;
+  --tint-orange-700: #dd6b20;
+  /* pink */
+  --tint-pink-300: #fbb6ce;
+  --tint-pink-500: #ed64a6;
+  --tint-pink-700: #d53f8c;
+  /* purple */
+  --tint-purple-300: #b794f4;
+  --tint-purple-500: #805ad5;
+  --tint-purple-700: #6b46c1;
+  /* red */
+  --tint-red-300: #fc8181;
+  --tint-red-500: #e53e3e;
+  --tint-red-700: #c53030;
+  /* teal */
+  --tint-teal-300: #81e6d9;
+  --tint-teal-500: #38b2ac;
+  --tint-teal-700: #2c7a7b;
+  /* yellow */
+  --tint-yellow-300: #faf089;
+  --tint-yellow-500: #ecc94b;
+  --tint-yellow-700: #d69e2e;
+}

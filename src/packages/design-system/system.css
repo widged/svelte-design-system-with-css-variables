@@ -76,7 +76,7 @@
   --radius-xs: 2px;
   --radius-sm: 4px;
   --grid-gap: var(--size-8);
-  --grid-page-gutter: var(--grid-gap);
+  --grid-page-gutter: 5vw;
   --pad-sm: 10px;
   --text-xs: var(--scale-000) / 1.5;
   --text-sm: var(--scale-00) / 1.5;
@@ -110,17 +110,17 @@
   --intent-error-300: #fda29b;
   --intent-error-500: #f04438;
   --intent-error-700: #b42318;
-  --error: var(--intent-error-500);
+  --intent-error: var(--intent-error-500);
   /** Warning */
   --intent-warning-300: #fec84b;
   --intent-warning-500: #f79009;
   --intent-warning-700: #b54708;
-  --warning: var(--intent-warning-500);
+  --intent-warning: var(--intent-warning-500);
   /** Success */
   --intent-success-300: #6ce9a6;
   --intent-success-500: #12b76a;
   --intent-success-700: #027a48;
-  --success: var(--intent-success-500);
+  --intent-success: var(--intent-success-500);
   /** App defaults */
   --color-text: var(--black);
   --color-text-secondary: var(--grey-600);
