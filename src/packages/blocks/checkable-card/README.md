@@ -1,11 +1,16 @@
 
 # Checkable Card
 
+![](preview.png)
+
+## Install 
+
 In the root of the project
 
 ```
 npm run usage --package blocks/checkable-card
 ```
+
 
 ## Credits 
 
