@@ -1,14 +1,27 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
+
   export let checked = false;
   export let labels = [null, null];
   export let style = null;
+  export let whenToggle = null;
   let [onTxt, offTxt] = Array.isArray(labels) && labels.length == 2 ? labels : [null, null];
   export let disabled = false;
+
+  const onToggle = (evt) => {
+    evt.preventDefault();
+    checked = !checked;
+    if (typeof whenToggle === 'function') {
+      whenToggle(checked);
+    }
+    dispatch('change', checked);
+  };
 </script>
 
 <section class:disabled {style}>
   <label>
-    <input type="checkbox" bind:checked on:change {disabled} />
+    <input type="checkbox" on:click={onToggle} on:change {disabled} />
     <i class:checked>
       <b />
     </i>

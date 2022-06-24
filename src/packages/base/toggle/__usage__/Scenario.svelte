@@ -1,4 +1,5 @@
 <script>
+  import { loop_guard } from 'svelte/internal';
   import Toggle from '../';
 </script>
 
@@ -20,6 +21,20 @@
     <Toggle labels="wrong format" />
     <h5>✦ labels in the correct format</h5>
     <Toggle labels={['on', 'off']} />
+  </article>
+  <article>
+    <h5>✦ event dispatched</h5>
+    <Toggle
+      on:change={(event) => {
+        window.alert(`toggled ${event.detail}`);
+      }}
+    />
+    <h5>✦ callback called</h5>
+    <Toggle
+      whenToggle={(d) => {
+        window.alert(`toggled ${d}`);
+      }}
+    />
   </article>
 </section>
 
