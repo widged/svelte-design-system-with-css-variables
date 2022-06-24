@@ -1,7 +1,7 @@
 {
   "name": "checkbox",
   "version": "0.0.0",
-  "description": "Minimal checkbox",
+  "description": "Minimal toggle",
   "source": "src/index.js",
   "main": "dist/main.js",
   "module": "dist/module.js",
