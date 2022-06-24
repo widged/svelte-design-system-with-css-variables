@@ -1,1 +1,1 @@
-export { default } from './Badge.svelte';
+export { default, POS, SIZE } from './Tooltip.svelte';
